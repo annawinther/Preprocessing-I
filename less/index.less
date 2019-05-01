@@ -5,6 +5,27 @@
    License: none (public domain)
 */
 
+//import
+@import "colors.less";
+
+// max width for website
+@maxWidthWebsite: 800px;
+
+// base font sizes
+@defaultFontSize: 100%;
+@mobileFontSize: 150%;
+
+// font sizes
+@xLargeFontSize: 2rem;
+@largeFontSize: 1.5rem;
+@mediumFontSize: 1rem;
+@smallFontSize: .5rem;
+
+// breakpoints
+@mobileBreakpoint: 500px;
+@tabletBreakpoint: 750px;
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -49,6 +70,14 @@ table {
 	border-spacing: 0;
 }
 
+// general styles
+:root {
+	fontsize: @defaultFontSize;
+
+	@media(max-width: @mobileBreakpoint) {
+		
+	}
+}
 /* Set every element's box-sizing to border-box */
 * {
     box-sizing: border-box;
@@ -63,14 +92,42 @@ html, body {
 	
  }
 
-
 /* start add style to code here */
 .title{
 	display: flex;
 	flex-direction: row;
 
 }
-.row header{
+.row {
+	header{
+		display: flex;
+		flex-direction: row;
+		font-size: 20px;
+		h1{
+			font-size: 30px;
+			margin: 0 auto;
+			padding-top: 10px;
+		}
+		nav{
+			margin: 0 auto;
+			padding: 0px;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			text-align: right;
+			background-color: ;
+			a{
+				justify-content: flex-end;
+				text-align: right;
+				margin: 20px;
+				text-decoration: none;
+				color: black;
+			}
+		}
+	}
+}
+
+/*.row header{
 	display: flex;
 	flex-direction: row;
 	font-size: 20px;
@@ -96,6 +153,7 @@ nav a{
 	text-decoration: none;
 	color: black;
 }
+*/
 
 .boxes{
 	display: flex;
@@ -104,38 +162,46 @@ nav a{
 	widows: 100%;
 }
 
-.box-a{
+.box-a {
 	display: flex;
 	flex-direction: row;
 	flex-direction: row;
-	
-}
-.box-a h1{
-	font-size: 30px;
-	text-align: left;
-	color: black;
-	margin: 0 auto;
-	padding-left:20px;
-}
-.box-a section {
+
+	h1{
+		font-size: 30px;
+		text-align: left;
+		color: black;
+		margin: 0 auto;
+		padding-left:20px;
+	}
+
+	section {
 	flex-direction: row;
 	text-align: left;
 	width: 100%;
 	padding: 20px;
+	border-bottom: 1px solid black;
+	border-width:50%;
+	}
 }
-
+/*
 section {
 	flex-direction: row;
 	text-align: left;
 	width: 100%;
 	padding: 20px;
 }
-
+*/
 .box-b {
+	section {
+		flex-direction: row;
+		text-align: left;
+		width: 100%;
+		padding: 20px;
+	}
 	ul{
 		flex-direction: column;
 		align-items: right;
-
 	}
 
 	li{
@@ -144,11 +210,29 @@ section {
 		text-align: center;
 		color: black;
 		width: 50%;
-		background-color: #e3e3ee;
 	}
 }
 
-
 .box-c{
-	
+	align-content: right;
+	section {
+		flex-direction: row;
+		text-align: left;
+		width: 100%;
+		padding: 20px;
+		.row{
+			justify-content: center;
+		}
+	}
+
+	/*ul{
+		width: 50%;
+		text-align: left;
+		li{
+			border: 1px solid black;
+		}
+
+		*/
+
+	}
 }

@@ -166,13 +166,40 @@ h6 {
   text-align: right;
   background-color: ;
 }
-nav a {
+.row header nav a {
   justify-content: flex-end;
   text-align: right;
   margin: 20px;
   text-decoration: none;
   color: black;
 }
+/*.row header{
+	display: flex;
+	flex-direction: row;
+	font-size: 20px;
+}
+.row header h1{
+	font-size: 30px;
+	margin: 0 auto;
+	padding-top: 10px;
+}
+ .row header nav{
+	margin: 0 auto;
+	padding: 0px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	text-align: right;
+	background-color: ;
+}
+nav a{
+	justify-content: flex-end;
+	text-align: right;
+	margin: 20px;
+	text-decoration: none;
+	color: black;
+}
+*/
 .boxes {
   display: flex;
   flex-direction: column;
@@ -195,8 +222,18 @@ nav a {
   text-align: left;
   width: 100%;
   padding: 20px;
+  border-bottom: 1px solid black;
+  border-width: 50%;
 }
+/*
 section {
+	flex-direction: row;
+	text-align: left;
+	width: 100%;
+	padding: 20px;
+}
+*/
+.box-b section {
   flex-direction: row;
   text-align: left;
   width: 100%;
@@ -212,5 +249,24 @@ section {
   text-align: center;
   color: black;
   width: 50%;
-  background-color: #e3e3ee;
+}
+.box-c {
+  align-content: right;
+}
+.box-c section {
+  flex-direction: row;
+  text-align: left;
+  width: 100%;
+  padding: 20px;
+  /*ul{
+		width: 50%;
+		text-align: left;
+		li{
+			border: 1px solid black;
+		}
+
+		*/
+}
+.box-c section .row {
+  justify-content: center;
 }
