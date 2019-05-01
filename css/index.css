@@ -1,1 +1,216 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: 1.5px;
+}
+/* start add style to code here */
+.title {
+  display: flex;
+  flex-direction: row;
+}
+.row header {
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+}
+.row header h1 {
+  font-size: 30px;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+.row header nav {
+  margin: 0 auto;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: right;
+  background-color: ;
+}
+nav a {
+  justify-content: flex-end;
+  text-align: right;
+  margin: 20px;
+  text-decoration: none;
+  color: black;
+}
+.boxes {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  widows: 100%;
+}
+.box-a {
+  display: flex;
+  flex-direction: row;
+}
+.box-a h1 {
+  font-size: 30px;
+  text-align: left;
+  color: black;
+  margin: 0 auto;
+  padding-left: 20px;
+}
+.box-a section {
+  flex-direction: row;
+  text-align: left;
+  width: 100%;
+  padding: 20px;
+}
+section {
+  flex-direction: row;
+  text-align: left;
+  width: 100%;
+  padding: 20px;
+}
+.box-b ul {
+  flex-direction: column;
+  align-items: right;
+}
+.box-b li {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  color: black;
+  width: 50%;
+  background-color: #e3e3ee;
+}
