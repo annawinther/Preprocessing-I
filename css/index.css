@@ -1,1 +1,233 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+:root {
+  font-size: 100%;
+}
+@media (max-width: 500px) {
+  :root {
+    font-size: 120%;
+    display: flex;
+    flex-direction: row;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  background-color: #e3e3e3;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: 1.5px;
+}
+.title {
+  display: flex;
+  flex-direction: row;
+}
+.row {
+  padding: 2rem;
+}
+@media (max-width: 500px) {
+  .row {
+    display: flex;
+  }
+}
+.row header {
+  display: flex;
+  flex-direction: row;
+  /*img{
+			display: flex;
+			flex-direction: column;
+			text-align: left;
+			width:100%;
+			margin: 0 auto;
+			padding: 4rem;
+		}*/
+}
+.row header h1 {
+  font-size: 2rem;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+@media (max-width: 500px) {
+  .row header h1 {
+    flex-direction: row;
+    text-align: left;
+    flex-wrap: nowrap;
+  }
+}
+.row header nav {
+  margin: 0 auto;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: right;
+}
+@media (max-width: 500px) {
+  .row header nav {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    text-align: center;
+    font-size: 0.5rem;
+  }
+}
+.row header nav a {
+  justify-content: flex-end;
+  text-align: right;
+  margin: 20px;
+  color: #3e3e3e;
+  text-decoration: none;
+}
+@media (max-width: 500px) {
+  .row header nav a {
+    padding-bottom: 20px;
+    padding-top: 40px;
+    border-bottom: 1px solid black;
+    border-radius: 1px 1px 1px 1px;
+    text-align: center;
+  }
+}
+/*.row header{
+	display: flex;
+	flex-direction: row;
+	font-size: 20px;
+}
+.row header h1{
+	font-size: 30px;
+	margin: 0 auto;
+	padding-top: 10px;
+}
+ .row header nav{
+	margin: 0 auto;
+	padding: 0px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	text-align: right;
+	background-color: ;
+}
+
+nav a{
+	justify-content: flex-end;
+	text-align: right;
+	margin: 20px;
+	text-decoration: none;
+	color: black;
+}
+*/
+.boxes {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  widows: 100%;
+}
+.box-a {
+  display: flex;
+  flex-direction: row;
+  /*h1{
+		font-size: 30px;
+		text-align: left;
+		color: black;
+		margin: 0 auto;
+		padding-left:20px;
+	}*/
+}
+.box-a section {
+  flex-direction: row;
+  text-align: ;
+  width: 100%;
+  padding: 20px;
+  border-bottom: 1px solid black;
+  border-width: 50%;
+}
+/*
+section {
+	flex-direction: row;
+	text-align: left;
+	width: 100%;
+	padding: 20px;
+}
+*/
+.box-b {
+  /*ul{
+		flex-direction: column;
+		align-items: right;
+		list-style-type: none;
+	}*/
+}
+.box-b section {
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+  padding: 20px;
+}
+.box-b section h2 {
+  padding: 10px;
+}
+.box-b .skills {
+  flex-direction: column;
+  text-align: right;
+  list-style-type: disc;
+}
+.box-b li {
+  padding: 1rem;
+  text-align: left;
+  color: black;
+  width: 50%;
+}
+.box-c {
+  align-content: right;
+  /*ul{
+		width: 50%;
+		text-align: left;
+		li{
+			border: 1px solid black;
+		}
+
+		*/
+}
+.box-c footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: ;
+  color: red;
+}
+.box-c footer span {
+  padding-left: 20px;
+}
+.box-c section {
+  flex-direction: row;
+  text-align: left;
+  width: 100%;
+  padding: 20px;
+}
+.box-c section .row {
+  justify-content: center;
+}
+.box-c section table {
+  font-size: 1rem;
+  border-collapse: collapse;
+  margin: 20px;
+  color: black;
+  border: 1px solid black;
+  width: 100%;
+}
+.box-c section table th {
+  border: 1px solid black;
+  padding: 1rem;
+}
+.box-c section table td {
+  border: 1px solid black;
+  padding: 1rem;
+}

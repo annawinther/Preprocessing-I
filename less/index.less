@@ -1,59 +1,277 @@
 // Is this working?
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+//import
+@import "colors.less";
+
+// max width for website
+@maxWidthWebsite: 800px;
+
+// base font sizes
+@defaultFontSize: 100%;
+@mobileFontSize: 120%;
+
+// font sizes
+@xLargeFontSize: 2rem;
+@largeFontSize: 1.5rem;
+@mediumFontSize: 1rem;
+@smallFontSize: .5rem;
+
+// breakpoints
+@mobileBreakpoint: 500px;
+@tabletBreakpoint: 750px;
+
+
+
+// general styles
+:root {
+	font-size: @defaultFontSize;
+
+	@media(max-width: @mobileBreakpoint){
+		font-size: @mobileFontSize;
+		display: flex;
+		flex-direction: row; 
+	}
 }
 
-/* Set every element's box-sizing to border-box */
+
+// Set every element's box-sizing to border-box 
 * {
     box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	background-color: @backgroundColor;
+}
+ h1, h2, h3, h4, h5, h6{
+	letter-spacing: 1.5px;
+
+ }
+
+//start add style to code here 
+.title{
+	display: flex;
+	flex-direction: row;
 }
 
+//.flex-row(){
+//	display: flex;
+//	flex-direction: row;
+//}
+
+
+.row {
+	@media(max-width: @mobileBreakpoint){
+		display: flex;
+	}
+	padding: 2rem;
+	header{
+		display: flex;
+		flex-direction: row;
+		//font-size: @largeFontSize;
+		h1{
+			@media(max-width: @mobileBreakpoint){
+				flex-direction: row;
+				text-align: left;
+				flex-wrap: nowrap;
+				
+			}
+			font-size: @xLargeFontSize;
+			margin: 0 auto;
+			padding-top: 1rem;		
+		}
+		nav{
+			@media(max-width: @mobileBreakpoint){
+				flex-direction: column;
+				justify-content: space-evenly;
+				align-content: center;
+				text-align: center;
+				font-size: @smallFontSize;
+			}
+			margin: 0 auto;
+			padding: 0.5rem;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			text-align: right;
+				a{
+				@media(max-width: @mobileBreakpoint){
+					padding-bottom:20px;
+					padding-top: 40px;
+       				border-bottom: 1px solid black;
+        			border-radius: 1px 1px 1px 1px;
+        			text-align: center;
+				}
+				justify-content: flex-end;
+				text-align: right;
+				margin: 20px;
+				color: #3e3e3e;
+				text-decoration: none;
+			}	
+		}
+		/*img{
+			display: flex;
+			flex-direction: column;
+			text-align: left;
+			width:100%;
+			margin: 0 auto;
+			padding: 4rem;
+		}*/
+	}
+}
+
+
+
+/*.row header{
+	display: flex;
+	flex-direction: row;
+	font-size: 20px;
+}
+.row header h1{
+	font-size: 30px;
+	margin: 0 auto;
+	padding-top: 10px;
+}
+ .row header nav{
+	margin: 0 auto;
+	padding: 0px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	text-align: right;
+	background-color: ;
+}
+
+nav a{
+	justify-content: flex-end;
+	text-align: right;
+	margin: 20px;
+	text-decoration: none;
+	color: black;
+}
+*/
+
+.boxes{
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	widows: 100%;
+}
+
+.box-a {
+	display: flex;
+	flex-direction: row;
+	flex-direction: row;
+	/*h1{
+		font-size: 30px;
+		text-align: left;
+		color: black;
+		margin: 0 auto;
+		padding-left:20px;
+	}*/
+	section {
+		flex-direction: row;
+		text-align: ;
+		width: 100%;
+		padding: 20px;
+		border-bottom: 1px solid black;
+		border-width: 50%;
+	}
+	
+}
+/*
+section {
+	flex-direction: row;
+	text-align: left;
+	width: 100%;
+	padding: 20px;
+}
+*/
+.box-b {
+	section {
+		flex-direction: column;
+		text-align: left;
+		width: 100%;
+		padding: 20px;
+		h2{
+			padding:10px;
+		}
+	}
+	.skills{
+		flex-direction: column;
+		text-align: right;
+		list-style-type: disc;
+	}
+	/*ul{
+		flex-direction: column;
+		align-items: right;
+		list-style-type: none;
+	}*/
+
+	li{
+		//border: 1px solid black;
+		padding: 1rem;
+		text-align: left;
+		color: @textColour;
+		width: 50%;
+		
+	}
+}
+
+.box-c{
+	align-content: right;
+	footer{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		color: blue;
+		span{
+			padding-left:20px;
+		}
+	}
+	section {
+		flex-direction: row;
+		text-align: left;
+		width: 100%;
+		padding: 20px;
+		.row{
+			justify-content: center;
+		}
+		table{
+			font-size: @mediumFontSize;
+			border-collapse: collapse;
+			margin: 20px;
+			color: black;
+			border: 1px solid black;
+			width: 100%;
+			th{
+				border: 1px solid black;
+				padding: 1rem;
+			}
+			td{
+				border: 1px solid black;
+				padding: 1rem;
+				
+			}
+	
+		}
+		
+	}
+
+	
+
+	/*ul{
+		width: 50%;
+		text-align: left;
+		li{
+			border: 1px solid black;
+		}
+
+		*/
+
+	}
