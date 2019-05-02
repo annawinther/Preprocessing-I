@@ -35,6 +35,11 @@ h6 {
 .row {
   padding: 2rem;
 }
+@media (max-width: 500px) {
+  .row {
+    display: flex;
+  }
+}
 .row header {
   display: flex;
   flex-direction: row;
@@ -129,13 +134,13 @@ nav a{
 .box-a {
   display: flex;
   flex-direction: row;
-}
-.box-a h1 {
-  font-size: 30px;
-  text-align: left;
-  color: black;
-  margin: 0 auto;
-  padding-left: 20px;
+  /*h1{
+		font-size: 30px;
+		text-align: left;
+		color: black;
+		margin: 0 auto;
+		padding-left:20px;
+	}*/
 }
 .box-a section {
   flex-direction: row;
@@ -161,20 +166,22 @@ section {
 	}*/
 }
 .box-b section {
-  flex-direction: row;
+  flex-direction: column;
   text-align: left;
   width: 100%;
   padding: 20px;
 }
+.box-b section h2 {
+  padding: 10px;
+}
 .box-b .skills {
   flex-direction: column;
-  text-align: center;
-  list-style-type: none;
+  text-align: right;
+  list-style-type: disc;
 }
 .box-b li {
-  border: 1px solid black;
-  padding: 10px;
-  text-align: center;
+  padding: 1rem;
+  text-align: left;
   color: black;
   width: 50%;
 }
@@ -188,6 +195,16 @@ section {
 		}
 
 		*/
+}
+.box-c footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: ;
+  color: red;
+}
+.box-c footer span {
+  padding-left: 20px;
 }
 .box-c section {
   flex-direction: row;

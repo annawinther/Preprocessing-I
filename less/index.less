@@ -46,7 +46,7 @@
 
 html, body {
 	height: 100%;
-	background-color: #e3e3e3;
+	background-color: @backgroundColor;
 }
  h1, h2, h3, h4, h5, h6{
 	letter-spacing: 1.5px;
@@ -66,6 +66,9 @@ html, body {
 
 
 .row {
+	@media(max-width: @mobileBreakpoint){
+		display: flex;
+	}
 	padding: 2rem;
 	header{
 		display: flex;
@@ -164,13 +167,13 @@ nav a{
 	display: flex;
 	flex-direction: row;
 	flex-direction: row;
-	h1{
+	/*h1{
 		font-size: 30px;
 		text-align: left;
 		color: black;
 		margin: 0 auto;
 		padding-left:20px;
-	}
+	}*/
 	section {
 		flex-direction: row;
 		text-align: ;
@@ -178,7 +181,6 @@ nav a{
 		padding: 20px;
 		border-bottom: 1px solid black;
 		border-width: 50%;
-
 	}
 	
 }
@@ -192,15 +194,18 @@ section {
 */
 .box-b {
 	section {
-		flex-direction: row;
+		flex-direction: column;
 		text-align: left;
 		width: 100%;
 		padding: 20px;
+		h2{
+			padding:10px;
+		}
 	}
 	.skills{
 		flex-direction: column;
-		text-align: center;
-		list-style-type: none;
+		text-align: right;
+		list-style-type: disc;
 	}
 	/*ul{
 		flex-direction: column;
@@ -209,10 +214,10 @@ section {
 	}*/
 
 	li{
-		border: 1px solid black;
-		padding: 10px;
-		text-align: center;
-		color: black;
+		//border: 1px solid black;
+		padding: 1rem;
+		text-align: left;
+		color: @textColour;
 		width: 50%;
 		
 	}
@@ -220,6 +225,15 @@ section {
 
 .box-c{
 	align-content: right;
+	footer{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		color: blue;
+		span{
+			padding-left:20px;
+		}
+	}
 	section {
 		flex-direction: row;
 		text-align: left;
@@ -243,10 +257,10 @@ section {
 				border: 1px solid black;
 				padding: 1rem;
 				
-			
 			}
 	
 		}
+		
 	}
 
 	
